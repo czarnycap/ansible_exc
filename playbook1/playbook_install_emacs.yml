@@ -1,6 +1,6 @@
 ---
 - name: Install emacs
-  hosts: centosss
+  hosts: local_vboxes
   remote_user: ansible
 
   tasks:
@@ -10,4 +10,10 @@
       update_cache: true
     become: true
     when: ansible_os_family == "RedHat"
+  - ansible.builtin.apt:
+      name: emacs
+      state: present
+      update_cache: true
+    become: true
+    when: ansible_os_family == "Debian"
     
