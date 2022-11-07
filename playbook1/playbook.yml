@@ -1,1 +1,13 @@
-#
+---
+- name: Install emacs
+  hosts: centosss
+  remote_user: ansible
+
+  tasks:
+  - ansible.builtin.yum:
+      name: emacs
+      state: present
+      update_cache: true
+    become: true
+    when: ansible_os_family == "RedHat"
+    
