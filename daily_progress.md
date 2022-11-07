@@ -1,4 +1,5 @@
 07-Nov-22 (Monday)
+#ansible
 cloned VMs (xubuntu, centos)
 changed hostnames via hostnamesctl
 added ansible user via usermod -a -G
@@ -8,6 +9,12 @@ changed .ssh/config files to allow for easier ssh connection
 deployed id_rsa.pub keys to remote machines to allow connections without password
 wrote playbook_remove_emacs 
 wrote playbok_hostname with debug input from hostname command
+
+#jenkins
+installed jenkins
+set pw/user
+created and compiled simple ansi c app (gcc -o calc.app calculator.c -lm)
+installed postgress (docker compose) with new docker volume
 
 
 base on https://www.toptechskills.com/ansible-tutorials-courses/ansible-yum-module-tutorial-examples/
