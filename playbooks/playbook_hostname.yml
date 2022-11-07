@@ -1,0 +1,10 @@
+---
+- name: check hostnames and IP addresses
+  hosts: local_vboxes
+  remote_user: ansible
+
+  tasks:
+  - name: check hostname
+    command: hostname
+    register: output
+  - debug: var=output 

@@ -1,0 +1,17 @@
+---
+- name: copy and run script
+  hosts: local_vboxes
+  remote_user: ansible
+
+  tasks:
+  - name: copy script
+    copy: 
+      src: ../remote_status.sh
+      dest: $HOME/remote_status.sh
+  - name: change permissions of the script
+    shell: chmod +x $HOME/remote_status.sh
+  - name: run script
+    shell: $HOME/remote_status.sh >> remote_status.log || date >> remote_status.log
+    
+    
+ 
