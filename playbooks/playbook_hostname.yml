@@ -1,5 +1,5 @@
 ---
-- name: check hostnames and IP addresses
+- name: check hostnames
   hosts: local_vboxes
   remote_user: ansible
 
