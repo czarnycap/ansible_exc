@@ -1,4 +1,8 @@
 #!/bin/bash
+# -e exits if any command has non-zero exit status
+# -u script exists if you reference to nonexisting variable
+# -o pipefail | This setting prevents errors in a pipeline from being masked
+set -euo pipefail
 
 HOSTNAME_CMD=$(hostname)
 DEBUGGING=off
